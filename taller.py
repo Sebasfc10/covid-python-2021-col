@@ -54,3 +54,9 @@ print(f"ejercicio 6: {dead}")
 #7
 conta = data.groupby('Tipo de contagio').size().sort_values(ascending = False)
 print(f"ejercicio 7: {conta}")
+
+#8
+data['Nombre departamento'].replace('Tolima','TOLIMA',inplace=True)
+data['Nombre departamento'].replace('Caldas','CALDAS',inplace=True)
+depa = len(data.groupby('Nombre departamento').size().sort_values(ascending = False))
+print(f"ejercicio 8: {depa}")
