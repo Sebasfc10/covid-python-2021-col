@@ -31,3 +31,7 @@ data['Nombre municipio'].replace('Pensilvania','PENSILVANIA',inplace=True)
 data['Nombre municipio'].replace('Anserma','ANSERMA',inplace=True)
 n_m = len(data.groupby('Nombre municipio').size())
 print(f"ejercicio 2: {n_m}")
+
+#3
+lista_m = data.groupby('Nombre municipio').size().sort_values(ascending = False)
+print(f"ejericicio 3: {lista_m}")
