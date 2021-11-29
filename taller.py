@@ -68,3 +68,7 @@ print(f"ejercicio 9: {lista_depa}")
 #10
 ty = data.groupby('Ubicación del caso').size().sort_values(ascending = False)
 print(f"ejercicio 10: {ty}")
+
+#11
+fdepa = data.groupby('Nombre departamento').size().sort_values(ascending = False).head(10)
+print(f"ejercicio 11: {fdepa}")
