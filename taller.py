@@ -125,3 +125,8 @@ print(f"ejericio 22: la tasa de mortalidad es: {morta} y la tasa de recuperados 
 mordepa = (data[data['Ubicación del caso'] == 'Fallecido'].groupby('Nombre departamento').size().sort_values(ascending = False) / data[data['Ubicación del caso'] == 'Fallecido'].groupby('Nombre departamento').size().sort_values(ascending = False).sum()) * 100
 recudepa = (data[data['Recuperado'] == 'Recuperado'].groupby('Nombre departamento').size().sort_values(ascending = False) / data[data['Recuperado'] == 'Recuperado'].groupby('Nombre departamento').size().sort_values(ascending = False).sum()) * 100
 print(f"ejercicio 23: tasa de mortalidad de los departamentos {mordepa} y tasa de recuperacion de los departamentos {recudepa}")
+
+#24
+mortacity = (data[data['Ubicación del caso'] == 'Fallecido'].groupby('Nombre municipio').size().sort_values(ascending = False) / data[data['Ubicación del caso'] == 'Fallecido'].groupby('Nombre municipio').size().sort_values(ascending = False).sum()) * 100
+recucity = (data[data['Recuperado'] == 'Recuperado'].groupby('Nombre municipio').size().sort_values(ascending = False) / data[data['Recuperado'] == 'Recuperado'].groupby('Nombre municipio').size().sort_values(ascending = False).sum()) * 100
+print(f"ejercicio 24: tasa de mortalidad{mortacity} y tasa de recuperacion {recucity} de la ciudad")
