@@ -169,3 +169,7 @@ plt.show()
 #30
 edadage = data[data['Ubicación del caso'] == 'Fallecido'].groupby('Edad').size().sort_values(ascending = False)
 print(f"ejercicio 30: {edad age}")
+
+#31
+poraten = ((data.groupby('Ubicación del caso').size().sort_values(ascending = False)) / ((data.groupby('Ubicación del caso').size().sort_values(ascending = False)).sum())) * 100
+print(f"ejercicio 31: {poraten}")
