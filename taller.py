@@ -100,3 +100,7 @@ print(f"ejercicio 17: {city}")
 #18
 citygender = data.groupby(['Nombre departamento','Nombre municipio','Sexo']).size()
 print(f"ejercicio 18: {citygender}")
+
+#19
+promedioC = data.groupby(['Nombre departamento','Nombre municipio','Sexo']).Edad.mean()
+print(f"ejercicio 19: {promedioC}")
