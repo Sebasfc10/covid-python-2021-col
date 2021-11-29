@@ -111,3 +111,7 @@ data['Nombre del país'].replace('VENEUELA','VENEZUELA',inplace=True)
 data['Nombre del país'].replace('MEXICO','MÉXICO',inplace=True)
 cProce = data.groupby('Nombre del país').size().sort_values(ascending = False)
 print(f"ejercicio 20: {cProce}")
+
+#21
+dateConta = data.groupby('Fecha de diagnóstico').size().sort_values(ascending = False)
+print(f"ejercicio 21: {dateConta}")
