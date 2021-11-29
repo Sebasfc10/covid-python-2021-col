@@ -149,3 +149,10 @@ plt.legend()
 plt.show()
 
 #28
+data.groupby('Nombre departamento').size().sort_values(ascending=False).head(10).plot(label = "Contagios",figsize=(20,10))
+Fallecidos = data[data['Ubicación del caso'] == 'Fallecido']
+Fallecidos.groupby('Nombre departamento').size().sort_values(ascending=False).head(10).plot(label = "Fallecidos",figsize=(20,10))
+Recuperado = data[data['Recuperado'] == 'Recuperado']
+Recuperado.groupby('Nombre departamento').size().sort_values(ascending=False).head(10).plot(label = "Recuperados",figsize=(20,10))
+plt.legend()
+plt.show()
