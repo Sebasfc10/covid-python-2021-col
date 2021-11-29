@@ -50,3 +50,7 @@ print(f"ejercicio 5: {recuperado}")
 #6
 dead = len(data[data['Ubicación del caso'] == 'Fallecido'])
 print(f"ejercicio 6: {dead}")
+
+#7
+conta = data.groupby('Tipo de contagio').size().sort_values(ascending = False)
+print(f"ejercicio 7: {conta}")
