@@ -72,3 +72,7 @@ print(f"ejercicio 10: {ty}")
 #11
 fdepa = data.groupby('Nombre departamento').size().sort_values(ascending = False).head(10)
 print(f"ejercicio 11: {fdepa}")
+
+#12
+fdepadead = data[data['Ubicación del caso'] == 'Fallecido'].groupby('Nombre departamento').size().sort_values(ascending = False).head(10)
+print(f"ejercicio 12: {fdepadead}")
