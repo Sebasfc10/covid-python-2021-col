@@ -173,3 +173,6 @@ print(f"ejercicio 30: {edad age}")
 #31
 poraten = ((data.groupby('Ubicación del caso').size().sort_values(ascending = False)) / ((data.groupby('Ubicación del caso').size().sort_values(ascending = False)).sum())) * 100
 print(f"ejercicio 31: {poraten}")
+
+#32
+data.groupby(['Ubicación del caso']).size().sort_values(ascending = False).plot(kind='bar')
