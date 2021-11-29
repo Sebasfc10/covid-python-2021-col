@@ -115,3 +115,8 @@ print(f"ejercicio 20: {cProce}")
 #21
 dateConta = data.groupby('Fecha de diagnóstico').size().sort_values(ascending = False)
 print(f"ejercicio 21: {dateConta}")
+
+#22
+morta = (len(data[data['Ubicación del caso'] == 'Fallecido']) / len(data)) * 100
+recu = (len(data[data['Recuperado'] == 'Recuperado']) / len(data)) * 100
+print(f"ejericio 22: la tasa de mortalidad es: {morta} y la tasa de recuperados es de: {recu}")
