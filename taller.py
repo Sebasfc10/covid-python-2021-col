@@ -104,3 +104,10 @@ print(f"ejercicio 18: {citygender}")
 #19
 promedioC = data.groupby(['Nombre departamento','Nombre municipio','Sexo']).Edad.mean()
 print(f"ejercicio 19: {promedioC}")
+
+#20
+data['Nombre del país'].replace('ESTADOS UNIDOS','ESTADOS UNIDOS DE AMÉRICA',inplace=True)
+data['Nombre del país'].replace('VENEUELA','VENEZUELA',inplace=True)
+data['Nombre del país'].replace('MEXICO','MÉXICO',inplace=True)
+cProce = data.groupby('Nombre del país').size().sort_values(ascending = False)
+print(f"ejercicio 20: {cProce}")
