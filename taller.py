@@ -88,3 +88,7 @@ print(f"ejercicio 14: {contaco}")
 #15
 fmundead = data[data['Ubicación del caso'] == 'Fallecido'].groupby('Nombre municipio').size().sort_values(ascending = False).head(10)
 print(f"ejercicio 15: {fmundead}")
+
+#16
+fmunrecu = data[data['Recuperado'] == 'Recuperado'].groupby('Nombre municipio').size().sort_values(ascending = False).head(10)
+print(f"ejercicio 16: {fmunrecu}")
