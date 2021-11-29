@@ -80,3 +80,7 @@ print(f"ejercicio 12: {fdepadead}")
 #13
 fdeparecu = data[data['Recuperado'] == 'Recuperado'].groupby('Nombre departamento').size().sort_values(ascending = False).head(10)
 print(f"ejercicio 13: {fdeparecu}")
+
+#14
+contaco = data.groupby('Nombre municipio').size().sort_values(ascending = False).head(10)
+print(f"ejercicio 14: {contaco}")
