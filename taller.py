@@ -60,3 +60,7 @@ data['Nombre departamento'].replace('Tolima','TOLIMA',inplace=True)
 data['Nombre departamento'].replace('Caldas','CALDAS',inplace=True)
 depa = len(data.groupby('Nombre departamento').size().sort_values(ascending = False))
 print(f"ejercicio 8: {depa}")
+
+#9
+lista_depa= data.groupby('Nombre departamento').size().sort_values(ascending = False)
+print(f"ejercicio 9: {lista_depa}")
