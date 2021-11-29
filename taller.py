@@ -92,3 +92,7 @@ print(f"ejercicio 15: {fmundead}")
 #16
 fmunrecu = data[data['Recuperado'] == 'Recuperado'].groupby('Nombre municipio').size().sort_values(ascending = False).head(10)
 print(f"ejercicio 16: {fmunrecu}")
+
+#17
+city = data.groupby(['Nombre departamento','Nombre municipio']).size().sort_values(ascending = False)
+print(f"ejercicio 17: {city}")
