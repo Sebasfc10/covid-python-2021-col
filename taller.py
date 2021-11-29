@@ -46,3 +46,7 @@ print(f"ejercicio 4: {casa}")
 data['Recuperado'].replace('fallecido','Fallecido',inplace=True)
 recuperado = len(data[data['Recuperado'] == 'Recuperado'])
 print(f"ejercicio 5: {recuperado}")
+
+#6
+dead = len(data[data['Ubicación del caso'] == 'Fallecido'])
+print(f"ejercicio 6: {dead}")
