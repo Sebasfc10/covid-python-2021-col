@@ -179,3 +179,6 @@ data.groupby(['Ubicación del caso']).size().sort_values(ascending = False).plot
 
 #33
 data.groupby(['Sexo']).size().sort_values(ascending = False).plot(kind='bar')
+
+#34
+$data.groupby(['Tipo de contagio']).size().sort_values(ascending = False).plot(kind='bar')
