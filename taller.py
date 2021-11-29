@@ -35,3 +35,10 @@ print(f"ejercicio 2: {n_m}")
 #3
 lista_m = data.groupby('Nombre municipio').size().sort_values(ascending = False)
 print(f"ejericicio 3: {lista_m}")
+
+#4
+data['Ubicación del caso'].replace('casa','Casa',inplace=True)
+data['Ubicación del caso'].replace('CASA','Casa',inplace=True)
+casa = len(data[data['Ubicación del caso'] == 'Casa'])
+print(f"ejercicio 4: {casa}")
+
