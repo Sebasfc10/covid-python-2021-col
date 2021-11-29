@@ -176,3 +176,6 @@ print(f"ejercicio 31: {poraten}")
 
 #32
 data.groupby(['Ubicación del caso']).size().sort_values(ascending = False).plot(kind='bar')
+
+#33
+data.groupby(['Sexo']).size().sort_values(ascending = False).plot(kind='bar')
