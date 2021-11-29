@@ -96,3 +96,7 @@ print(f"ejercicio 16: {fmunrecu}")
 #17
 city = data.groupby(['Nombre departamento','Nombre municipio']).size().sort_values(ascending = False)
 print(f"ejercicio 17: {city}")
+
+#18
+citygender = data.groupby(['Nombre departamento','Nombre municipio','Sexo']).size()
+print(f"ejercicio 18: {citygender}")
