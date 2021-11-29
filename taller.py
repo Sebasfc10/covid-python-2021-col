@@ -134,3 +134,7 @@ print(f"ejercicio 24: tasa de mortalidad{mortacity} y tasa de recuperacion {recu
 #25
 city2 = data.groupby(['Nombre municipio','Ubicación del caso']).size()
 print(f"ejericio 25: {city2}")
+
+#26
+pedadcity = data.groupby(['Nombre municipio','Sexo']).Edad.mean()
+print(f"Punto 26: {pedadcity}")
