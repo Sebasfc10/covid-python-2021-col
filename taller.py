@@ -120,3 +120,8 @@ print(f"ejercicio 21: {dateConta}")
 morta = (len(data[data['Ubicación del caso'] == 'Fallecido']) / len(data)) * 100
 recu = (len(data[data['Recuperado'] == 'Recuperado']) / len(data)) * 100
 print(f"ejericio 22: la tasa de mortalidad es: {morta} y la tasa de recuperados es de: {recu}")
+
+#23
+mordepa = (data[data['Ubicación del caso'] == 'Fallecido'].groupby('Nombre departamento').size().sort_values(ascending = False) / data[data['Ubicación del caso'] == 'Fallecido'].groupby('Nombre departamento').size().sort_values(ascending = False).sum()) * 100
+recudepa = (data[data['Recuperado'] == 'Recuperado'].groupby('Nombre departamento').size().sort_values(ascending = False) / data[data['Recuperado'] == 'Recuperado'].groupby('Nombre departamento').size().sort_values(ascending = False).sum()) * 100
+print(f"ejercicio 23: tasa de mortalidad de los departamentos {mordepa} y tasa de recuperacion de los departamentos {recudepa}")
