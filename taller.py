@@ -165,3 +165,7 @@ Recuperado = data[data['Recuperado'] == 'Recuperado']
 Recuperado.groupby('Nombre municipio').size().sort_values(ascending=False).head(10).plot(label = "Recuperados",figsize=(20,10))
 plt.legend()
 plt.show()
+
+#30
+edadage = data[data['Ubicación del caso'] == 'Fallecido'].groupby('Edad').size().sort_values(ascending = False)
+print(f"ejercicio 30: {edad age}")
